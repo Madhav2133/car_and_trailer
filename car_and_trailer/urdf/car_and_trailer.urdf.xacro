@@ -1,0 +1,576 @@
+<?xml version="1.0" ?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot name="car_and_trailer" xmlns:xacro="http://ros.org/wiki/xacro">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.254 0.442216009225132 0.0199373734974326"
+        rpy="0 0 0" />
+      <mass
+        value="10" />
+      <inertia
+        ixx="4.7150458258324"
+        ixy="-9.46382342562312E-17"
+        ixz="-1.15879432428749E-16"
+        iyy="1.08472485190803"
+        iyz="-0.316618072863205"
+        izz="5.55558636298786" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_and_trailer/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_and_trailer/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Steer_Left">
+    <inertial>
+      <origin
+        xyz="-0.488789550969635 1.0033 0.0730308461748111"
+        rpy="0 0 0" />
+      <mass
+        value="0.205068851277686" />
+      <inertia
+        ixx="0.000542814148788583"
+        ixy="8.06604141671555E-20"
+        ixz="-7.80565059903452E-05"
+        iyy="0.000546349438812291"
+        iyz="4.3660867095781E-19"
+        izz="9.40760107910967E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_and_trailer/meshes/Steer_Left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_and_trailer/meshes/Steer_Left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Left_Steer"
+    type="continuous">
+    <origin
+      xyz="0.508 2.0066 0"
+      rpy="3.1416 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Steer_Left" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Left_Front_Wheel">
+    <inertial>
+      <origin
+        xyz="-2.22044604925031E-16 0 -0.0254"
+        rpy="0 0 0" />
+      <mass
+        value="1.62962959682595" />
+      <inertia
+        ixx="0.00460132751039961"
+        ixy="-7.56314231045415E-39"
+        ixz="-9.18354961579912E-39"
+        iyy="0.00460132751039961"
+        iyz="-8.3042856448893E-36"
+        izz="0.00850174046700706" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_and_trailer/meshes/Left_Front_Wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_and_trailer/meshes/Left_Front_Wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Left_Front_Wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.4826 1.0033 0.1651"
+      rpy="-1.5708 0 -1.5708" />
+    <parent
+      link="Steer_Left" />
+    <child
+      link="Left_Front_Wheel" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Steer_Right">
+    <inertial>
+      <origin
+        xyz="-0.488789550969635 1.0033 0.073030846174811"
+        rpy="0 0 0" />
+      <mass
+        value="0.205068851277686" />
+      <inertia
+        ixx="0.000542814148788574"
+        ixy="3.02286543581972E-20"
+        ixz="-7.80565059903447E-05"
+        iyy="0.00054634943881229"
+        iyz="3.76125579916017E-20"
+        izz="9.4076010791088E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_and_trailer/meshes/Steer_Right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_and_trailer/meshes/Steer_Right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Rigth_Steer"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="3.1416 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="Steer_Right" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Rigth_Front_Wheel">
+    <inertial>
+      <origin
+        xyz="0 0 0.0254"
+        rpy="0 0 0" />
+      <mass
+        value="1.62962959682594" />
+      <inertia
+        ixx="0.0046013275103996"
+        ixy="-7.56314231045415E-39"
+        ixz="-4.17161150360144E-36"
+        iyy="0.0046013275103996"
+        iyz="-8.30428564488929E-36"
+        izz="0.00850174046700706" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_and_trailer/meshes/Rigth_Front_Wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_and_trailer/meshes/Rigth_Front_Wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Rigth_Front_Wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.4826 1.0033 0.1651"
+      rpy="3.1416 -1.5708 0" />
+    <parent
+      link="Steer_Right" />
+    <child
+      link="Rigth_Front_Wheel" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Right_Back_Wheel">
+    <inertial>
+      <origin
+        xyz="-6.93889390390723E-18 1.38777878078145E-16 0.0254"
+        rpy="0 0 0" />
+      <mass
+        value="1.62962959682594" />
+      <inertia
+        ixx="0.0046013275103996"
+        ixy="-7.56314231045415E-39"
+        ixz="-4.17161150360145E-36"
+        iyy="0.0046013275103996"
+        iyz="-8.30428564488929E-36"
+        izz="0.00850174046700706" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_and_trailer/meshes/Right_Back_Wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_and_trailer/meshes/Right_Back_Wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Right_Back_Wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.4826 0.0381 -0.1651"
+      rpy="1.5708 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="Right_Back_Wheel" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Left_Back_Wheel">
+    <inertial>
+      <origin
+        xyz="0 1.38777878078145E-16 -6.93889390390723E-18"
+        rpy="0 0 0" />
+      <mass
+        value="1.62962959682595" />
+      <inertia
+        ixx="0.00460132751039961"
+        ixy="-7.56314231045466E-39"
+        ixz="2.38823524459631E-19"
+        iyy="0.00460132751039961"
+        iyz="-8.3042856448893E-36"
+        izz="0.00850174046700706" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_and_trailer/meshes/Left_Back_Wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_and_trailer/meshes/Left_Back_Wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Left_Back_Wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0 0.0381 -0.1651"
+      rpy="1.5708 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="Left_Back_Wheel" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Lidar">
+    <inertial>
+      <origin
+        xyz="0 0 0.0508"
+        rpy="0 0 0" />
+      <mass
+        value="0.0514814798763057" />
+      <inertia
+        ixx="4.63609173816422E-05"
+        ixy="1.91171029335894E-54"
+        ixz="-4.83762878413658E-38"
+        iyy="4.63609173816422E-05"
+        iyz="-6.41845928115206E-38"
+        izz="4.15172394462466E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_and_trailer/meshes/Lidar.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_and_trailer/meshes/Lidar.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Lidar_joint"
+    type="continuous">
+    <origin
+      xyz="0.254 0.508 0.1016"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Lidar" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Trailer">
+    <inertial>
+      <origin
+        xyz="5.55111512312578E-17 -0.487159812610342 0.0270212640980216"
+        rpy="0 0 0" />
+      <mass
+        value="2" />
+      <inertia
+        ixx="0.480368573327889"
+        ixy="-2.89517779042653E-17"
+        ixz="-1.06691186966856E-17"
+        iyy="0.326889903542419"
+        iyz="-0.0724208623875704"
+        izz="0.60971027515868" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_and_trailer/meshes/Trailer.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_and_trailer/meshes/Trailer.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Trailer_joint"
+    type="continuous">
+    <origin
+      xyz="0.254 0.0254 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Trailer" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Trailer_Left_Wheel">
+    <inertial>
+      <origin
+        xyz="2.22044604925031E-16 -1.11022302462516E-16 -0.0254"
+        rpy="0 0 0" />
+      <mass
+        value="1.62962959682595" />
+      <inertia
+        ixx="0.00460132751039961"
+        ixy="-5.42101086242752E-20"
+        ixz="3.41875854169894E-19"
+        iyy="0.00460132751039961"
+        iyz="1.20750969492291E-20"
+        izz="0.00850174046700707" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_and_trailer/meshes/Trailer_Left_Wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_and_trailer/meshes/Trailer_Left_Wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Trailer_Left_Wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.2286 -0.57366 -0.1651"
+      rpy="1.5708 0.042706 1.5708" />
+    <parent
+      link="Trailer" />
+    <child
+      link="Trailer_Left_Wheel" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Trailer_Right_Wheel">
+    <inertial>
+      <origin
+        xyz="0 -1.11022302462516E-16 0.0254"
+        rpy="0 0 0" />
+      <mass
+        value="1.62962959682594" />
+      <inertia
+        ixx="0.0046013275103996"
+        ixy="-7.56314231044211E-39"
+        ixz="3.36924666781802E-19"
+        iyy="0.0046013275103996"
+        iyz="-8.30428564488929E-36"
+        izz="0.00850174046700706" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_and_trailer/meshes/Trailer_Right_Wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car_and_trailer/meshes/Trailer_Right_Wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Trailer_Right_Wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.2286 -0.57366 -0.1651"
+      rpy="1.5708 0 1.5708" />
+    <parent
+      link="Trailer" />
+    <child
+      link="Trailer_Right_Wheel" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+</robot>
