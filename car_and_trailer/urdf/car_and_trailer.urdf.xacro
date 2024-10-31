@@ -574,7 +574,7 @@
     <axis
       xyz="0 0 1" />
   </joint>
-  <link
+  <!-- <link
     name="Trailer_Left_Back_Wheel">
     <inertial>
       <origin
@@ -626,7 +626,7 @@
       link="Trailer_Left_Back_Wheel" />
     <axis
       xyz="0 0 1" />
-  </joint>
+  </joint> -->
   <link
     name="Trailer_Right_Back_Wheel">
     <inertial>
