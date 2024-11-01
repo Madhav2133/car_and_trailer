@@ -6,6 +6,7 @@ urdf
 meshes
 launch
 worlds
+config
 DESTINATION share/${PROJECT_NAME}/
 )
 
@@ -24,6 +25,7 @@ find_package(robot_state_publisher REQUIRED)
 find_package(xacro REQUIRED)
 find_package(tf2 REQUIRED)
 find_package(tf2_ros REQUIRED)
+find_package(ros2_control REQUIRED)
 
 # Default to C99
 if(NOT CMAKE_C_STANDARD)
