@@ -12,7 +12,7 @@ import termios
 from pynput import keyboard
 
 # Define key codes
-LIN_VEL_STEP_SIZE = 10
+LIN_VEL_STEP_SIZE = 5
 ANG_VEL_STEP_SIZE = 0.1
 
 class KeyboardControlNode(Node):
@@ -70,9 +70,9 @@ class KeyboardControlNode(Node):
                     linear_vel=0.0
                     steer_angle=0.0
                 elif key == 'w':  # Forward
-                    linear_vel += LIN_VEL_STEP_SIZE
-                elif key == 's':  # Reverse
                     linear_vel -= LIN_VEL_STEP_SIZE
+                elif key == 's':  # Reverse
+                    linear_vel += LIN_VEL_STEP_SIZE
                 elif key == 'd':  # Right
                     steer_angle -= ANG_VEL_STEP_SIZE
                 elif key == 'a':  # Left
