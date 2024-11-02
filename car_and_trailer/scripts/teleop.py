@@ -20,7 +20,8 @@ class KeyboardControlNode(Node):
     def __init__(self):
         super().__init__('keyboard_control_node')
 
-        self.joint_position_pub = self.create_publisher(Float64MultiArray, '/position_controller/commands', 10)
+        self.joint_position_pub1 = self.create_publisher(Float64MultiArray, '/position_controller1/commands', 10)
+        self.joint_position_pub2 = self.create_publisher(Float64MultiArray, '/position_controller2/commands', 10)
         
         self.wheel_velocities_pub1 = self.create_publisher(Float64MultiArray, '/velocity_controller1/commands', 10)
         self.wheel_velocities_pub2 = self.create_publisher(Float64MultiArray, '/velocity_controller2/commands', 10)
@@ -89,7 +90,8 @@ class KeyboardControlNode(Node):
                 wheel_velocities.data = [linear_vel]
                 joint_positions.data = [steer_angle]
 
-                self.joint_position_pub.publish(joint_positions)
+                self.joint_position_pub1.publish(joint_positions)
+                self.joint_position_pub2.publish(joint_positions)
                 
                 self.wheel_velocities_pub1.publish(wheel_velocities)
                 self.wheel_velocities_pub2.publish(wheel_velocities)

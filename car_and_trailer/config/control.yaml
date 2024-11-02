@@ -4,7 +4,10 @@ controller_manager:
 
         use_sim_time: true
 
-        position_controller:
+        position_controller1:
+            type: position_controllers/JointGroupPositionController
+
+        position_controller2:
             type: position_controllers/JointGroupPositionController
 
         joint_state_broadcaster:
@@ -16,10 +19,21 @@ controller_manager:
         velocity_controller2:
             type: velocity_controllers/JointGroupVelocityController
 
-position_controller:
+position_controller1:
     ros__parameters:
         joints:
             - Left_Front_Wheel_joint
+        interface_name: position
+        command_interfaces:
+            - position
+        state_interfaces:
+            - position
+            # - velocity
+
+position_controller2:
+    ros__parameters:
+        joints:
+            - Rigth_Front_Wheel_joint
         interface_name: position
         command_interfaces:
             - position
