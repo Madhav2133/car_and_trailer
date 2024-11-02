@@ -114,26 +114,5 @@ def generate_launch_description():
             robot_state_publisher,
             spawn_robot,
             tf
-            
-            # ExecuteProcess(
-            # cmd=['ros2', 'control', 'load_controller', '--set-state', 'start', 'joint_state_broadcaster'],
-            # output='screen'
-            # ),
-            # ExecuteProcess(
-            #     cmd=['ros2', 'control', 'load_controller', '--set-state', 'start', 'velocity_controller1'],
-            #     output='screen'
-            # ),
-            # ExecuteProcess(
-            #     cmd=['ros2', 'control', 'load_controller', '--set-state', 'start', 'velocity_controller2'],
-            #     output='screen'
-            # ),
-            # ExecuteProcess(
-            #     cmd=['ros2', 'control', 'load_controller', '--set-state', 'start', 'position_controller1'],
-            #     output='screen'
-            # ),
-            # ExecuteProcess(
-            #     cmd=['ros2', 'control', 'load_controller', '--set-state', 'start', 'position_controller2'],
-            #     output='screen'
-            # )
         ]
     )

@@ -722,7 +722,7 @@
     </hardware>
  
     <!-- # Velocity Controllers -->
-    <joint name="Rigth_Back_Wheel_joint">
+    <joint name="Right_Back_Wheel_joint">
         <command_interface name="velocity">
             <param name="min">-1000.0</param>
             <param name="max">1000.0</param>
@@ -740,14 +740,6 @@
 
     <!-- # Position Controller -->
     <joint name="Left_Front_Wheel_joint">
-        <command_interface name="position">
-            <param name="min">-3.14</param>
-            <param name="max">3.14</param>
-        </command_interface>
-        <state_interface name="position"/>
-    </joint>
-
-    <joint name="Rigth_Front_Wheel_joint">
         <command_interface name="position">
             <param name="min">-3.14</param>
             <param name="max">3.14</param>

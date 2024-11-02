@@ -7,6 +7,7 @@ meshes
 launch
 worlds
 config
+scripts
 DESTINATION share/${PROJECT_NAME}/
 )
 
@@ -18,6 +19,7 @@ install(
 install(
   PROGRAMS
   launch/robot_description_publisher.py
+  scripts/teleop.py
   DESTINATION lib/${PROJECT_NAME}
   )
 

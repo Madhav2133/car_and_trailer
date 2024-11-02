@@ -16,7 +16,7 @@ controller_manager:
         velocity_controller2:
             type: velocity_controllers/JointGroupVelocityController
 
-position_controller1:
+position_controller:
     ros__parameters:
         joints:
             - Left_Front_Wheel_joint
@@ -26,18 +26,6 @@ position_controller1:
         state_interfaces:
             - position
             # - velocity
-
-position_controller2:
-    ros__parameters:
-        joints:
-            - Rigth_Front_Wheel_joint
-        interface_name: position
-        command_interfaces:
-            - position
-        state_interfaces:
-            - position
-            # - velocity
-
 
 velocity_controller1:
     ros__parameters:
@@ -53,7 +41,7 @@ velocity_controller1:
 velocity_controller2:
     ros__parameters:
         joints:
-            - Rigth_Back_Wheel_joint
+            - Right_Back_Wheel_joint
         interface_name: velocity
         command_interfaces:
             - velocity
